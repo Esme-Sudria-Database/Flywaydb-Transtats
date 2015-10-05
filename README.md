@@ -5,15 +5,18 @@ Installation
 
 Clone this repository in your [postgresql virtual machine](https://github.com/Esme-Sudria-Database/Vagrant-Postgresql)
 
-        git clone https://github.com/Esme-Sudria-Database/Flywaydb-Transtats.git
+    vagrant ssh
+
+    git clone https://github.com/Esme-Sudria-Database/Flywaydb-Transtats.git
 
 Execute the migration
 
-        mvn flyway:migrate
+    cd Flywaydb-Transtats
+    mvn flyway:migrate
 
 You can clean the database by executing
 
-        mvn flyway:clean
+    mvn flyway:clean
 
 To execute more migration, modify version target into pom.xml
 from 20150925_1900 to 20150925_2000 :
