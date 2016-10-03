@@ -40,7 +40,7 @@ Main requests
 Get all unique origin airport and cities
 -----------------------------------------
 
-        SELECT origin_airport_id, origin_city_name, count(distinct(origin_airport_id)) as count FROM transtats GROUP BY origin_airport_id, origin_city_name ORDER BY COUNT DESC;
+        SELECT origin_airport_id, origin_city_name, count(*) as count_travel FROM transtats GROUP BY origin_airport_id, origin_city_name ORDER BY count_travel DESC;
 
 Select data from origin after migration
 -------------------------------------------
